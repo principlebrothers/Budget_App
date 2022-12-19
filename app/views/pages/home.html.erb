@@ -1,0 +1,12 @@
+<section>
+  <h1>BudgetBuddy</h1>
+  <% if current_user %>
+    <h2>Welcome, <%= current_user.name %></h2>
+    <%= link_to 'Sign out', destroy_user_session_path %>
+  <% else %>
+    <p>Sign up or log in to get started!</p>
+    <%= link_to 'Sign up', new_user_registration_path %> | 
+    <%= link_to 'Log in', new_user_session_path %>
+  <% end %>
+</section>
+
