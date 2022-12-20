@@ -8,7 +8,8 @@ class GroupsController < ApplicationController
   end
 
   def create
-    @group = Group.new(group_params).where(author_id: current_user.id)
+    @group = Group.new(group_params)
+    @group.author_id = current_user.id
     if @group.save
       redirect_to groups_path, notice: 'Category was successfully created.'
     else
