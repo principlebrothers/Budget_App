@@ -11,6 +11,12 @@
   </head>
 
   <body>
+    <nav>
+      <ul>
+        <li><%= link_to 'Back', root_path %></li>
+        <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+      </ul>
+    </nav>
     <%= render 'layouts/alerts' %>
     <%= yield %>
   </body>
