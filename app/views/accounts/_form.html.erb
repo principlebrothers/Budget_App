@@ -1,0 +1,11 @@
+<%= form_with(url: group_accounts_path, model: @account) do |f| %>
+  <div class="form__field">
+    <%= f.text_field :name, placeholder: 'Name of Transaction' %>
+  </div>
+  <div class="form__field">
+    <%= f.number_field :amount, step: :any %>
+  </div>
+  <div class="form__field">
+    <%= f.submit 'Save' %>
+  </div>
+<% end %>
