@@ -23,6 +23,5 @@ RSpec.describe GroupAccount, type: :model do
     subject.account_id = 1
     expect(subject.group_id).to eq 1
     expect(subject.account_id).to eq 1
-
   end
 end
