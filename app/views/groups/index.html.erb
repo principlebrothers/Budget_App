@@ -1,0 +1,25 @@
+<section>
+  <h1>Categories</h1>
+  <p>Welcome, <%= current_user.name %></p>
+  <% if @groups.empty? %>
+    <p>You have no groups yet. Create one!</p>
+    <%= link_to 'Add a new category', new_group_path %>
+  <% else %>
+    <ul>
+      <% @groups.each do |group| %>
+        <li>
+          <%= link_to group_accounts_path(group) do %>
+            <%= image_tag group.icon, alt: group.name, style: 'width: 7%' %>
+            <div class="icon__name">
+                <h3><%= group.name %></h3>
+                <p><%= group.created_at.strftime('%d %b %Y') %></p>
+            </div>
+            <span>$ <%= group.accounts.sum(:amount) %></span>
+          <% end %>
+        </li>
+      <% end %>
+      <%= link_to 'Add a new category', new_group_path %>
+    </ul>
+  <% end %>
+</section>
+
