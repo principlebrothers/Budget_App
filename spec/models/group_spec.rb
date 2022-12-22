@@ -15,6 +15,6 @@ RSpec.describe Group, type: :model do
 
   it 'should have many transactions' do
     assc = described_class.reflect_on_association(:accounts)
-    expect(assc.macro).to eq :has_and_belongs_to_many
+    expect(assc.macro).to eq :has_many
   end
 end

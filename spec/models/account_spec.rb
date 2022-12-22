@@ -15,6 +15,6 @@ RSpec.describe Account, type: :model do
 
   it 'should have many groups' do
     assc = described_class.reflect_on_association(:groups)
-    expect(assc.macro).to eq :has_and_belongs_to_many
+    expect(assc.macro).to eq :has_many
   end
 end

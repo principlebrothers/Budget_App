@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_19_160207) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_20_181828) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -23,11 +23,13 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_19_160207) do
     t.index ["author_id"], name: "index_accounts_on_author_id"
   end
 
-  create_table "accounts_groups", id: false, force: :cascade do |t|
+  create_table "group_accounts", force: :cascade do |t|
     t.bigint "group_id", null: false
     t.bigint "account_id", null: false
-    t.index ["account_id", "group_id"], name: "index_accounts_groups_on_account_id_and_group_id"
-    t.index ["group_id", "account_id"], name: "index_accounts_groups_on_group_id_and_account_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["account_id"], name: "index_group_accounts_on_account_id"
+    t.index ["group_id"], name: "index_group_accounts_on_group_id"
   end
 
   create_table "groups", force: :cascade do |t|
@@ -58,5 +60,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_19_160207) do
   end
 
   add_foreign_key "accounts", "users", column: "author_id"
+  add_foreign_key "group_accounts", "accounts"
+  add_foreign_key "group_accounts", "groups"
   add_foreign_key "groups", "users", column: "author_id"
 end
