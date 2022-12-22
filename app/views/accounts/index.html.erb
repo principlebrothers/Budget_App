@@ -1,31 +1,30 @@
-<section>
-  <h1>Transactions</h1>
-  <div>
-    <h3>Group: <%= @group.name %></h3>
-    <p>Total Transaction: $<%= @accounts.sum(:amount) %></p>
+<%= render 'common/navigation', :title => 'Transactions' %>
+<section class="container flex account__placeholder">
+  <div class="sum flex">
+    <h3 class='group__name'><%= @group.name %></h3>
+    <p class='amount'>Total Transaction: $<%= @accounts.sum(:amount) %></p>
   </div>
 
-  <span><%= %></span>
-  <table>
-    <thead>
-      <tr>
-        <th>Transaction Name</th>
-        <th>Date</th>
-        <th>Amount</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @accounts.each do |account| %>
+  <div class='account flex'>
+    <table>
+      <thead>
         <tr>
-          <td><%= account.name %></td>
-          <td><%= account.created_at.strftime('%d %b %Y') %></td>
-          <td>$<%= account.amount %></td>
+          <th>Transaction Name</th>
+          <th>Date</th>
+          <th>Amount</th>
         </tr>
-      <% end %>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+        <% @accounts.each do |account| %>
+          <tr>
+            <td><%= account.name %></td>
+            <td><%= account.created_at.strftime('%d %b %Y') %></td>
+            <td>$<%= account.amount %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
   <br>
-  <%= link_to 'Add a new transaction', new_group_account_path %> |
-  <%= link_to 'Back', groups_path %> |
-  <%= link_to 'Home', destroy_user_session_path %>
+    <%= link_to 'Add a new transaction', new_group_account_path, class: "btn", style: 'margin-left: 0.5rem' %>
 </section>

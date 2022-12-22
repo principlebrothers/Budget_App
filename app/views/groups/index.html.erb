@@ -1,24 +1,24 @@
-<section>
-  <h1>Categories</h1>
-  <p>Welcome, <%= current_user.name %></p>
+<%= render 'common/navigation', :title => 'Categories' %>
+<section class="container flex">
+  <h2>Welcome, <em><b><%= current_user.name %></b></em></h2>
   <% if @groups.empty? %>
     <p>You have no groups yet. Create one!</p>
     <%= link_to 'Add a new category', new_group_path %>
   <% else %>
-    <ul>
+    <ul class="list flex">
       <% @groups.each do |group| %>
-        <li>
-          <%= link_to group_accounts_path(group) do %>
-            <%= image_tag group.icon, alt: group.name, style: 'width: 7%' %>
-            <div class="icon__name">
-                <h3><%= group.name %></h3>
-                <p><%= group.created_at.strftime('%d %b %Y') %></p>
-            </div>
-            <span>$ <%= group.accounts.sum(:amount) %></span>
-          <% end %>
+        <li class="item flex">
+          <%= image_tag group.icon, alt: group.name, style: 'width: 8%' %>
+          <div class="item__details flex">
+            <%= link_to group_accounts_path(group) do %>
+              <h3 class="space"><%= group.name %></h3>
+            <% end %>
+            <p class="space"><%= group.created_at.strftime('%d %b %Y') %></p>
+            <span class="space">$<%= group.accounts.sum(:amount) %></span>
+          </div>
         </li>
       <% end %>
-      <%= link_to 'Add a new category', new_group_path %>
+      <%= link_to 'Add a new category', new_group_path, class: "btn" %>
     </ul>
   <% end %>
 </section>

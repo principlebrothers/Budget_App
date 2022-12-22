@@ -1,15 +1,312 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
+ *= require font-awesome
  */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;800&family=Poppins:wght@300;400&display=swap');
+
+:root {
+  --primary: #3776c2;
+  --secondary: #5fb523;
+  --text: #434b54;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text);
+  background-color: rgb(250, 250, 250);
+}
+
+.flex {
+  display: flex;
+}
+
+.btn {
+  padding: 0.8em 1em;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: var(--secondary);
+  align-self: flex-start;
+  color: #fff;
+}
+
+.header {
+  background-color: var(--primary);
+  padding: 1.5rem;
+  color: #fff;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fa-arrow-left {
+  font-size: 1rem;
+  color: #fff;
+  font-weight: lighter;
+}
+
+.header .header-action {
+  color: white;
+  font-size: 1.05rem;
+}
+
+.header h2 {
+  font-size: 1.5rem;
+}
+
+.greeting.container {
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.greeting .text {
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+}
+
+.text h1 {
+  font-size: 3rem;
+  color: #8b8b8b;
+}
+
+.text h1 span {
+  color: var(--primary);
+}
+
+.content {
+  flex-direction: column;
+  width: 100%;
+  height: 50%;
+  position: relative;
+}
+
+.btn__group {
+  flex-direction: column;
+  gap: 1rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.btn__group .btn {
+  width: 100%;
+  text-align: center;
+}
+
+.btn__group .btn:first-child {
+  width: 100%;
+  background: var(--primary);
+}
+
+.btn__group .btn:last-child {
+  width: 100%;
+  background: transparent;
+  color: var(--text);
+}
+
+.link {
+  align-self: center;
+}
+
+.access {
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.access form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 570px;
+  padding: 1rem;
+  background-color: #fff;
+}
+
+.access form input {
+  width: 100%;
+  padding: 0.8em 1em;
+  border: none;
+  border-bottom: 1px solid rgb(231, 231, 231);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+}
+
+
+.access form input::placeholder {
+  color: #ccc;
+}
+
+.access form select:focus,
+.access form input:focus {
+  outline: none;
+  border-bottom: 1px solid var(--primary);
+}
+
+.access form [type='checkbox'] {
+  width: unset;
+}
+
+.submit {
+  background-color: var(--secondary);
+  color: #fff;
+  padding: 0.8em 1em;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.submit:hover {
+  background-color: #4e941c;
+}
+
+.options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding-left: 1rem;
+  flex-wrap: wrap;
+}
+
+.options a {
+  color: #4e941c;
+  font-size: 0.8rem;
+}
+
+.options a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  flex-direction: column;
+  gap: 0.6rem;
+  width: 100%;
+  padding: 1rem;
+}
+
+.list {
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.list .item {
+  gap: 1.5rem;
+  padding: 1rem;
+  background: #fff;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+.list .item img {
+  width: 15%;
+}
+
+.item__details {
+  flex: 1;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.item__details a h3 {
+  font-size: 1.5rem;
+  color: #494949;
+}
+
+.item__details .space {
+  margin-right: 0.5rem;
+}
+
+.item__details :last-child {
+  font-weight: 700;
+}
+
+.sum {
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #fff;
+  color: #494949;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.amount, .group__name {
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.text p {
+  font-size: 1.06rem;
+}
+
+
+.account__placeholder {
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.account {
+  width: 100%;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0.5rem;
+}
+
+.account table {
+  text-align: left;
+}
+
+.account table tr th {
+  padding-block: 0.5em;
+  font-size: 0.95rem;
+  color: rgb(43, 43, 43);
+  border-bottom: 2px solid rgb(129, 129, 129);
+  border-right: 2px solid rgb(129, 129, 129);
+}
+
+.account table tr td {
+  padding-block: 0.5em;
+  font-size: 0.9rem;
+  color: rgb(43, 43, 43);
+  border-bottom: 1.5px solid rgb(129, 129, 129);
+  border-right: 1.5px solid rgb(129, 129, 129);
+}
+
