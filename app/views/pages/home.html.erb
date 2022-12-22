@@ -1,11 +1,17 @@
-<section>
-  <h1>BudgetBuddy</h1>
-  <% if current_user %>
-    <%= link_to 'Sign out', destroy_user_session_path %>
-  <% else %>
-    <p>Sign up or log in to get started!</p>
-    <%= link_to 'Sign up', new_user_registration_path %> |
-    <%= link_to 'Log in', new_user_session_path %>
-  <% end %>
+<section class="greeting container flex">
+  <div class="text flex">
+    <h1> Budget<span>Buddy</span> </h1>
+    <p> Track your spending and save money </p>
+  </div>
+  <div class="image flex">
+    <%= image_tag 'Logo.png' %>
+  </div>
+  <div class="content flex">
+    <p class='text flex'>Sign up or log in to get started!</p>
+    <div class="btn__group flex">
+      <%= link_to 'Sign up', new_user_registration_path, class: 'btn' %>
+      <%= link_to 'Log in', new_user_session_path, class: 'btn' %>
+    </div>
+  </div>
 </section>
 
