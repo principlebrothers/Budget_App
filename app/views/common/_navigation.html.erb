@@ -1,0 +1,15 @@
+<header class="header flex">
+  <%= link_to '/', id: 'Home' do %>
+    <span class="header-action">
+      <i class="fa fa-arrow-left"></i>
+    </span>
+  <% end %>
+  <h2><%= title %></h2>
+  <% if user_signed_in? %>
+    <%= link_to destroy_user_session_path, method: :delete do %>
+      <span class="header-action">
+        Logout
+      </span>
+    <% end %>
+  <% end %>
+</header>
