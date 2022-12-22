@@ -165,7 +165,6 @@ body {
   font-size: 1rem;
 }
 
-
 .access form input::placeholder {
   color: #ccc;
 }
@@ -267,7 +266,8 @@ body {
   border-radius: 8px;
 }
 
-.amount, .group__name {
+.amount,
+.group__name {
   font-size: 1.5rem;
   font-weight: 500;
   font-family: 'Open Sans', sans-serif;
@@ -276,7 +276,6 @@ body {
 .text p {
   font-size: 1.06rem;
 }
-
 
 .account__placeholder {
   justify-content: center;
@@ -309,4 +308,3 @@ body {
   border-bottom: 1.5px solid rgb(129, 129, 129);
   border-right: 1.5px solid rgb(129, 129, 129);
 }
-

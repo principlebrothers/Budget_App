@@ -27,7 +27,7 @@ After you're finished please remove all the comments and instructions!
   <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
   <br/>
 
-  <h3><b>BUDGET MOBILE WEB APPLICATION</b></h3>
+  <h3><b>BUDGET BUDDY MOBILE WEB APPLICATION</b></h3>
 
 </div>
 
@@ -57,9 +57,9 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Budget_App] <a name="about-project"></a>
+# 📖 [BudgetBuddy] <a name="about-project"></a>
 
-**Budget_App** is a mobile web application where one can manage their budget: a person will have a list of transactions associated with a category, so that they can see how much money they spent and on what. It was build on this [Entity Relationship Diagram](https://github.com/microverseinc/curriculum-rails/blob/main/capstone/images/erd_diagram.png)
+**BudgetBuddy** is a mobile web application where one can manage their budget: a person will have a list of transactions associated with a category, so that they can see how much money they spent and on what. It was build on this [Entity Relationship Diagram](https://github.com/microverseinc/curriculum-rails/blob/main/capstone/images/erd_diagram.png)
 
 ## 🛠 Built With <a name="built-with"></a>
 
