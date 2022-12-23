@@ -9,7 +9,7 @@ RSpec.describe 'Pages', type: :request do
 
     it 'should have the right title' do
       get root_path
-      expect(response.body).to include('BudgetBuddy')
+      expect(response.body).to include('Track your spending and save money')
     end
 
     it 'should have a link to sign up' do
