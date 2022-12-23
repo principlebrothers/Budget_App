@@ -73,7 +73,7 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     user_name:     'adonuernest@gmail.com',
     password:      'lsznfajdzcvuwcck',
-    domain:        'localhost:3000',
+    domain:        'budget-app-xk5s.onrender.com',
     address:       'smtp.gmail.com',
     port:          '587',
     authentication: :plain,
