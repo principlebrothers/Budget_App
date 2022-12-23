@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.feature "Groups", type: :feature do
-  before (:all) do
+RSpec.feature 'Groups', type: :feature do
+  before(:all) do
     @user = User.create(name: 'Ernest', email: 'ernestadonu@yahoo.com', confirmed_at: Time.now, password: '@34budget')
   end
 
@@ -19,7 +19,7 @@ RSpec.feature "Groups", type: :feature do
     end
 
     scenario 'User should see a link to create a new group' do
-      expect(page).to have_link("Add a new category")
+      expect(page).to have_link('Add a new category')
     end
   end
 end
