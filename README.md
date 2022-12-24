@@ -106,7 +106,8 @@ After you're finished please remove all the comments and instructions!
 
 > Add a link to your deployed project.
 
-- [Live Demo](https://budget-app-xk5s.onrender.com/)
+- [Live Link](https://budget-app-xk5s.onrender.com/)
+- [Features Demo Link](https://www.loom.com/share/0c24f68f0c4e417995036c5a306ccfc0)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -218,9 +219,11 @@ If you like this project buy the team a [drink](.../.../)
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> Give credit to everyone who inspired your codebase.
 
-We would like to thank [Microverse](https://www.microverse.org/) for inspiring this project
+- I would like to thank [Microverse](https://www.microverse.org/) for bring up this project to help implent rails design concept.
+- I will like to acknowledge [Gregoire Vella on Behance](https://www.behance.net/gregoirevella) who was creative to design this project
+- I will like to acknowldge [Creative Commons](https://creativecommons.org/licenses/by-nc/4.0/) for setting a legal plateform to preseve the hardwork of content creator.
+- I will like to ackknowledge [Render](https://render.com/) for making it possible to beginner to deploy their app on their website
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -242,8 +245,7 @@ We would like to thank [Microverse](https://www.microverse.org/) for inspiring t
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](./LICENSE.md) licensed.
 
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
