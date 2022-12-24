@@ -1,0 +1,30 @@
+<%= render 'common/navigation', :title => 'Transactions' %>
+<section class="container flex account__placeholder">
+  <div class="sum flex">
+    <h3 class='group__name'><%= @group.name %></h3>
+    <p class='amount'>Total Transaction: $<%= @accounts.sum(:amount) %></p>
+  </div>
+
+  <div class='account flex'>
+    <table>
+      <thead>
+        <tr>
+          <th>Transaction Name</th>
+          <th>Date</th>
+          <th>Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @accounts.each do |account| %>
+          <tr>
+            <td><%= account.name %></td>
+            <td><%= account.created_at.strftime('%d %b %Y') %></td>
+            <td>$<%= account.amount %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  <br>
+    <%= link_to 'Add a new transaction', new_group_account_path, class: "btn", style: 'margin-left: 0.5rem' %>
+</section>

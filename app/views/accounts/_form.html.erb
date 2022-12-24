@@ -1,0 +1,13 @@
+<%= form_with(url: group_accounts_path, model: @account) do |f| %>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name, placeholder: 'Name of Transaction', autofocus: true %>
+  </div>
+  <div class="field">
+    <%= f.label :amount %>
+    <%= f.number_field :amount, step: :any, autofocus: true, placeholder: 'Amount (Greater than 0)'%>
+  </div>
+  <div class="form__field">
+    <%= f.submit 'Save', class: 'submit' %>
+  </div>
+<% end %>
